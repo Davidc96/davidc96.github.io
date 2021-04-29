@@ -24,7 +24,7 @@
     </header>
 
     <div>
-        <aside id="sidebar">
+        <aside id="sidebar" class="main-content">
           {% if site.show_downloads %}
             <a href="{{ site.github.zip_url }}" class="button">
               <small>Download</small>
@@ -36,6 +36,7 @@
             </a>
           {% endif %}
           <h2>Categorias</h2>
+
           {% for tag in site.tags %}
           <h3>{{ tag[0] }}</h3>
           <ul>
