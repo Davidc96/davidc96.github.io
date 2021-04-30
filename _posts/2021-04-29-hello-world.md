@@ -2,6 +2,7 @@
 layout: post
 author: David Cuadrado
 tag: Hello World
+custom: This is custom
 ---
 ![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
 Text can be **bold**, _italic_, or ~~strikethrough~~.
