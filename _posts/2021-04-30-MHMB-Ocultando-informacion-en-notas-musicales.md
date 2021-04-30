@@ -2,7 +2,7 @@
 layout: post
 author: David Cuadrado
 tag: Esteganografía
-title: "MHMB: Ocultando información en notas músicales"
+title: "MHMB: Ocultando información en notas musicales"
 ---
 
 ![MIDI_IMAGE_PROGRAM](../assets/images/posts/MHMB/MIDI_LOGO.svg?style=centerme)
@@ -14,7 +14,7 @@ MHMB o por sus siglas Midi Hidden Message Builder.
 # Esteganografía en ficheros MIDI
 Para poder realizar este proyecto, estaba pensando en donde podría ocultar el mensaje. Como bien he dicho, no quiero que se vea a ojos de un editor hexadecimal y a su vez tampoco quiero complicarme la vida por lo que me planteé la siguiente pregunta ¿Y si creo música?
 
-## Notas músicales y desarrollo de la aplicación
+## Notas musicales y desarrollo de la aplicación
 En este punto seguramente estais pensando que ya se me ha ido la cabeza ¿Que tiene que ver crear música con ocultar un mensaje?. Darle una vuelta de tuerca y pensarlo mejor. Una canción está creada por notas (DO RE MI FA SOL LA SI). ¿Con una técnica de substitución, puedo convertir una letra a una nota músical?
 
 ¡Venga va! ¡¿Como vas a poder hacer una substitución del abecedario que contiene 25 letras con tan solo 7 notas?! Tranquilo, estamos obviando muchas cosas. Un piano esta formado por teclas blancas y negras, las 8 notas mencionadas con anterioridad se corresponden a las 8 blancas, pero también podemos utilzar las teclas negras.
