@@ -27,6 +27,9 @@
         <aside id="sidebar">
           <h2>Páginas</h2>
           <ul>
+            <li>
+              <h2><a href="{{ '/' | absolute_url }}">Inicio</a></h2>
+            </li>
             {% for page in site.pages %}
               {% if page.title %}
                 <li>
