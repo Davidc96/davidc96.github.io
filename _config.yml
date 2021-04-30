@@ -18,5 +18,4 @@ footer-links:
   googleplus: # anything in your profile username that comes after plus.google.com/
 
 include: ['_pages']
-paginate: 1
-paginate_path: "/page:num/"
+paginate: 5
