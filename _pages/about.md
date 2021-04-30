@@ -1,6 +1,7 @@
 ---
 layout: default
-author: David Cuadrado
+title: Acerca de mi
+permalink: "/about/"
 ---
 
 ![Davidc96](https://avatars.githubusercontent.com/u/4979202?v=4)
