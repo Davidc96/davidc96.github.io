@@ -4,7 +4,7 @@ title: Acerca de mi
 permalink: "/about/"
 ---
 # Acerca de mi
-![Davidc96](../assets/me.jpg?style=centerme)
+![Davidc96](../assets/images/me.jpg?style=centerme)
 
 Hola mi nombre es David Cuadrado y actualmente trabajo en Deloitte como Analista de código estático.
 Desde bien pequeño, me interesó el mundo de la informática siendo mi primer lenguaje de programación Visual Basic.NET que empezé a los 13 años, al año siguiente, descubrí C# y actualmente es el lenguaje de programación que mas utilizo.
@@ -13,4 +13,6 @@ Mi pasión por saber como funcionan las cosas a nivel interno, me llevó a inter
 
 Realizé un master de Ciberseguridad en LaSalle Barcelona y tengo el Certified Ethical Hacker (CEH).
 
-![Davidc96](https://www.hackthebox.eu/home/users/profile/38668)
+Jugador activo de TryHackMe y HackTheBox
+
+![HTB_Badge](https://www.hackthebox.eu/badge/image/38668)
