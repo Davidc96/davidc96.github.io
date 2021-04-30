@@ -68,6 +68,11 @@ button {
   letter-spacing: -1px;
 }
 
+img[src$="centerme"] {
+  display:block;
+  margin: 0 auto;
+}
+
 #content-wrapper {
   padding-top: 30px;
   border-top: solid 1px #fff;
