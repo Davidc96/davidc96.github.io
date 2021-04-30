@@ -28,9 +28,11 @@
           <h2>Páginas</h2>
           <ul>
             {% for page in site.pages %}
-            <li>
-                <h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
-            </li>
+              {% if page.title %}
+                <li>
+                  <h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
+                </li>
+              {% endif %}
             {% endfor %}
         </ul>
           <h2>Categorias</h2>
