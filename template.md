@@ -1,7 +1,6 @@
 ---
 layout: post
 author: David Cuadrado
-tag: Hello World
 ---
 ![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
 Text can be **bold**, _italic_, or ~~strikethrough~~.
