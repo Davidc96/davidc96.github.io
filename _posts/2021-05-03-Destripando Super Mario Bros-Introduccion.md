@@ -82,12 +82,12 @@ Este bug es producido debido a que el juego no calcula bien las colisiones hacie
 
 Un consejo que doy para aquellos que quieran iniciarse a la ingenieria inversa es haceros esta pregunta: ¿Si yo fuera desarrollador y me dicen que tengo que implementar un sistema de 1 o 3 tuberías para ir a otros mundos, como lo haría?
 
-Respondiendo a esta pregunta diriamos, bueno, lo más fácil es tener un Array, en este caso como piden que 3 Warpzones y pueden tener de 1 a 3 tuberías, yo lo que haría es crear un Array multidimensional de 3 x 3 (3: Warpzones con 3 tuberías cada una)
+Respondiendo a esta pregunta diriamos, bueno, lo más fácil es tener un Array, en este caso como piden 3 Warpzones que pueden tener de 1 a 3 tuberías, yo lo que haría es crear un Array multidimensional de 3 x 3 (3: Warpzones con 3 tuberías cada una)
 
 Claro, el array lo inicializaría tal y como he comentado antes acerca de que Warpzones hay:
 * El primer caso (primera fila del array) corresponde a la Warpzone de 1-2, en ese caso como esta solamente va al mundo 4, 3 o 2 pues inicializaré el array con 0x04, 0x03 y 0x02
-* El segundo caso (segunda fila del array) corresponde a la Warpzone de 4-2 pero con solo una tubería. Al ser C, no puedo dejar unos espacios en blanco he de sí o sí inicializarlo con 3 valores y como la tubería está en el centro, pues pondré en el valor del centro el número 5 (0x05) y el resto por ejemplo 0xff
-* El tercer caso (tercera fila del array) igual que el primero pero con los mundos 6, 7 y 8 (0x08, 0x07 y 0x06)
+* El segundo caso (segunda fila del array) corresponde a la Warpzone de 4-2 pero con solo una tubería. Al ser C, no puedo dejar espacios en blanco, he de sí o sí inicializarlo con 3 valores y como la tubería está en el centro, pues pondré en el valor del centro el número 5 (0x05) y el resto por ejemplo 0xff
+* El tercer caso (tercera fila del array) es igual que el primero pero con los mundos 6, 7 y 8 (0x08, 0x07 y 0x06)
 
 Mi array en C quedaría algo así:
 
