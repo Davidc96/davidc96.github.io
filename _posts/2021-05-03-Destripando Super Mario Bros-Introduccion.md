@@ -48,10 +48,10 @@ La estructura de una instrucción en la cpu 6502 es la siguiente:
 
 |<span style="color:blue">02</span>:<span style="color:red">824C</span>:<span style="color:GoldenRod">BD</span> <span style="color:black">65 07</span>|
 
-Azul: Identificación de la instrucción en la memoria VRAM
-Rojo: Dirección de memoria en la ROM donde está la instrucción
-Dorado: OpCode de la instrucción en este caso es un LDA
-Negro: Direccion de memoria VRAM que coje el operando $0765
+Azul: Identificación de la instrucción en la memoria VRAM<br/>
+Rojo: Dirección de memoria en la ROM donde está la instrucción<br/>
+Dorado: OpCode de la instrucción en este caso es un LDA<br/>
+Negro: Direccion de memoria VRAM que coje el operando $0765<br/>
 
 # Super Mario Bros y el mundo -1
 
