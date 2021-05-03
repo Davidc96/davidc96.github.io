@@ -19,3 +19,4 @@ footer-links:
 
 include: ['_pages']
 paginate: 5
+markdown: GFM
