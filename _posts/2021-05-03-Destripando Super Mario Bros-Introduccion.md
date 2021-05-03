@@ -98,7 +98,7 @@ char warpzoneNumber[3][3] = {
     {0x08, 0x07, 0x06} // Warpzone oculto de 4-2
 };
 ```
-Aquí uno puede decir: Claro sí, una cosa es que lo programe yo pero otra cosa es como realmente esté programado. Piensa una cosa, a veces los programadores buscamos cosas sencillas y creeme esta solución no equdista mucho de como realmente está programado, al fin y al cabo por muy espectacular que sea el programa, reducelo a la cosa mas sencilla y te aseguro que no fallarás.
+Aquí uno puede decir: Claro sí, una cosa es que lo programe yo pero otra cosa es como realmente esté programado. Piensa una cosa, a veces los programadores buscamos cosas sencillas y creeme esta solución no equidista mucho de como realmente está programado, al fin y al cabo por muy espectacular que sea el programa, redúcelo a la cosa mas sencilla y te aseguro que no fallarás.
 
 Volviendo al tema, al tener una referencia de como está construido, si buscamos en HxD esos valores seguidos (0x04, 0x03, 0x02) veremos que encontraremos esta información:
 
