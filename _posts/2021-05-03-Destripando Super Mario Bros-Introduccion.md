@@ -2,7 +2,7 @@
 layout: post
 author: David Cuadrado
 tag: [Reverse Engineering, Videojuegos]
-title: "Destripando el glitch del Mundo -1 de Super Mario Bros: Introducción, Hardware de la NES y conociendo el Glitch a alto nivel"
+title: "Destripando el glitch del Mundo -1 de Super Mario Bros: Introducción, Hardware de la NES y conociendo el Glitch a alto nivel (Parte 1)"
 ---
 
 ![MUNDO_MENOS_1_PORTADA](https://davidc96.github.io/assets/images/posts/DSMB/Introduccion/Mundo361Portada.jpg?style=centerme)
