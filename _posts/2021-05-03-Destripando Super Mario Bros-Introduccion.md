@@ -102,9 +102,9 @@ Aquí uno puede decir: Claro sí, una cosa es que lo programe yo pero otra cosa 
 
 Volviendo al tema, al tener una referencia de como está construido, si buscamos en HxD esos valores seguidos (0x04, 0x03, 0x02) veremos que encontraremos esta información:
 
-.db $04 $03 $02 $00
-.db $24 $05 $24 $00
-.db $08 $07 $06 $00
+.db $04 $03 $02 $00<br/>
+.db $24 $05 $24 $00<br/>
+.db $08 $07 $06 $00<br/>
 
 ¿Veis? De la deducción que hemos sacado sobre como programarlo a realmente como está programado, no equidista de mucho jeje.
 La única diferencia que veo es que en la segunda fila en vez de usar 0xff, utilizan 0x24 pero esto tiene una explicación muy interesante.
