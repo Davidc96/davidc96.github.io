@@ -112,7 +112,7 @@ La única diferencia que veo es que en la segunda fila en vez de usar 0xff, util
 En la NES el 0x24 corresponde al caracter " " (vacío) algo muy interesante teniendo en cuenta que en la Warpzone se imprimen los números encima de las tuberías. Como el desarrollador, al acceder a la Warpzone de 4-2 de una sola tubería, no quiere imprimir números a los lados, solamente el 5, decidió inicializar su array con un 24 que significa caracter " " (vacío). 
 
 ¿Por que esto es importante? Porque al acceder al mundo bugeado, nos aparece en pantalla un _-1, no aparece el número de delante porque en verdad estamos accediendo al mundo 0x24-1 y como 0x24 es un caracter vacío, es por eso que no se muestra en pantalla, de ahí que se llame mundo -1.
-![MUNDO_-1](https://davidc96.github.io/assets/images/posts/DSMB/Introduccion/Mundo261.jpg?style=centerme)
+![MUNDO_-1](https://davidc96.github.io/assets/images/posts/DSMB/Introduccion/Mundo361.jpg?style=centerme)
 
 # Conclusión
 
