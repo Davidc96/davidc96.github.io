@@ -2,7 +2,7 @@
 layout: post
 author: David Cuadrado
 tag: [Reverse Engineering, Videojuegos] Prestashop 1.4.4.1
-title: "NOTPUB¡¡¡Hackearon a mi padre!!! Analisis Forense de la página web de su empresa"
+title: "¡¡¡Hackearon a mi padre!!! Analisis Forense de la página web de su empresa"
 ---
 Sinceramente no tenía intención de hacer este post pero el otro día a mi padre le hackearon la página web de su empresa y le añadieron a su sistema de ficheros, un archivo PHP bastante sospechoso bajo el nombre de framework.php. Pero antes de pasar al analisis de dicho fichero, vamos a contar como sucedieron las cosas, en pocas palabras vamos a hacer un analisis forense de este caso.
 
@@ -86,3 +86,25 @@ En este caso, como ejemplo voy a elegir la línea 21 que hace un ini_set() donde
 ![FUNCTION_KR_WORK]()
 
 Es decir, podemos afirmar que el parametro $_cmc es el base64 que te interesa y el parametro $_tic es la clave para descifrarlo. Con esto en mente, si conseguimos todas las claves podemos descifrar todo lo que hay en el array de base64s.
+
+Para ello voy a utilizar Linux y grep para poder obtener todas las llamadas a la función _kr. El comando que he utilizado para grepear todas las funciones kr es el siguiente:
+
+```sh
+$ cat payload_beatufied.php | grep -o -E "kr\(([^)]+)\)" > allKr
+```
+
+El comando aparte de obtener el resultado que queremos, lo guarda en un fichero llamado allKr
+![GREP_KR]()
+
+Una vez realizado esto, vamos a un compilador PHP online (como por ejemplo Paiza.io) y pegamos ahí, el array con todos los base64, la función de cifrado y todas las funciones kr que hemos obtenido con anterioridad:
+![B64_DECODE]()
+
+De todos los strings que hay, tenemos desde cabeceras HTTP, cabeceras SMTP y URLs:
+```
+b.barracudacentral.org
+xbl.spamhaus.org
+sbl.spamhaus.org
+zen.spamhaus.org
+bl.spamcop.net
+```
+Al parecer, todas las URL que hay pertenecen a firmas de Ciberseguridad, muy raro todo la verdad. Llegado a este punto. y al ver que el código es bastante infumable de leer
