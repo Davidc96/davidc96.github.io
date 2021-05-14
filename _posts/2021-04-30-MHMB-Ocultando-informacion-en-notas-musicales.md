@@ -31,9 +31,9 @@ Estas octavas están agrupadas en este orden en un piano:
 ```
 
 Siendo la Octava 0 la agrupación más grave y la Octava 9 la agrupación mas aguda.
-Si hacemos las matemáticas tenemos que 12 notas, que forma una octava, multiplicado por 9 octavas, da un total de: ¡108 notas! Mas que suficiente para hacer nuestro diccionario por substitución, incluso podemos incluir minusculas, como por ejemplo:
-A -> DO (oct. 0)
-a -> DO# (oct. 0)  
+Si hacemos las matemáticas tenemos que 12 notas, que forma una octava, multiplicado por 9 octavas, da un total de: ¡108 notas! Mas que suficiente para hacer nuestro diccionario por substitución, incluso podemos incluir minusculas, como por ejemplo:</br>
+A -> DO (oct. 0)<br/>
+a -> DO# (oct. 0)<br/> 
 B -> RE (oct. 0)  
 b -> RE# (oct. 0) 
 etc.
