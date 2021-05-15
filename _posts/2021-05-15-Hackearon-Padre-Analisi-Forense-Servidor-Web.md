@@ -2,7 +2,7 @@
 layout: post
 author: David Cuadrado
 tag: [Reverse Engineering, Web]
-title: "¡¡¡Hackearon a mi padre!!! Analisis Forense de la página web de su empresa"
+title: "¡¡¡Hackearon a mi padre!!! Analisis Forense y RE de un malware escrito en PHP"
 ---
 ![PORTADA](https://davidc96.github.io/assets/images/posts/AFPWE/portada.jpg?style=centerme)
 Sinceramente no tenía intención de hacer este post pero el otro día a mi padre le hackearon la página web de su empresa y le añadieron a su sistema de ficheros, un archivo PHP bastante sospechoso bajo el nombre de framework.php. Pero antes de pasar al analisis de dicho fichero, vamos a contar como sucedieron las cosas, en pocas palabras vamos a hacer un analisis forense de este caso.
@@ -30,7 +30,7 @@ Hacía mucho tiempo que no entraba en un CPanel (el único que recuerdo era el d
 Dentro del CPanel hay una opción que dice "Archivos de log sin procesar", voy a ir a esa página y me voy a descargar dichos logs sin procesar a ver que son.
 ![LOG_WINDOW](https://davidc96.github.io/assets/images/posts/AFPWE/acceso_procesar.JPG?style=centerme)
 
-Al parecer hay 2, uno para el dominio en si y el otro para el mismo dominio pero SSL, nosotros descargamos ambos a ver que encontramos. También por la zona tenemos los logs FTP, abrá que hecharles un ojo, no vaya a ser que hayan entrado por ahí.
+Al parecer hay 2, uno para el dominio en si y el otro para el mismo dominio pero SSL, nosotros descargamos ambos a ver que encontramos. También por la zona tenemos los logs FTP, habrá que hecharles un ojo, no vaya a ser que hayan entrado por ahí.
 
 Después de revisarlos con detalle, no veo ninguna correlación entre los logs ni tampoco veo que se haya explotado ninguna vulnerabilidad. También puede ser que el momento en que realizaron el ataque, estos logs se perdieran, en todo caso parece que de momento estoy en un camino sin salida.
 
@@ -148,7 +148,6 @@ Al parecer también incluye una especie de C2C para poder pedirle al script que 
 |:------|--------------------------------------------------------------------------------------|
 |u      | Al parecer te desubscribes de la newsletter y lo guarda en un fichero de log         |
 |lu     | Imprime el fichero de log por pantalla                                               |
-|u      | Al parecer te desubscribes de la newsletter y lo guarda en un fichero de log         |
 |ce     | Al parecer hace un parse_string para guardarlo dentro del POST                       |
 |ch     | Envia un correo para probar si el servidor soporta el envío de correos               |
 |sn     | Envía el correo de SPAM                                                              |
@@ -168,12 +167,13 @@ El malware está formado por 2 partes:
 - Un stager que se encarga de ofuscar y ocultar el verdadero malware a ojos de los antivirus y firewalls, este stager utiliza base64 y gzip para ocultar dicho malware y luego lo ejecuta con eval()
 - El malware en sí que parece ser un archivo minificado al máximo pósible llegando al punto de que sus cadenas de texto están cifradas con una especie de cifrado XOR
 
-Al desminificar el malware y descifrar sus cadenas de texto mediante scripts varios, se ha llegado a la conclusión de que el malware en cuestión es un Spammer, es decir, un malware que básicamente se encargará de enviar correos spam a tu nombre o nombre de la empresa.
+Al desminificar el malware y descifrar sus cadenas de texto mediante varios scripts desarrollados durante el análisis, se ha llegado a la conclusión de que el malware en cuestión es un Spammer, es decir, un malware que básicamente se encargará de enviar correos spam a tu nombre o nombre de la empresa.
+El atacante mediante un sistema de C2C, controlará dicho malware para poder enviar los correos.
 
 Gracias al artículo de TrendMicro, se puede saber que este tipo de malwares infectan tus servidores debido a credenciales débiles o ya comprometidas.
 Con esto concluimos el post, espero que os haya parecido interesante y nos vemos en el siguiente artículo.
 
 # Materiales
-Como regalo al haber llegado al final, teneis en la ruta /assets/samples/PHPRevEng el malware en cuestión y los diferentes scripts y txts que he ido utilizando en un zip con la contraseña "infected". Utilizar este tipo de malware con fines educativos y no para dañar a nadie porque estareis cometiendo un delito. Dicho esto, me despido.
+Como regalo al haber llegado al final, teneis en la ruta /assets/samples/PHPRevEng, en mi repositorio, el malware en cuestión y los diferentes scripts y txts que he ido utilizando en un zip con la contraseña "infected". Utilizar este tipo de malware con fines educativos y no para dañar a nadie porque estareis cometiendo un delito. Dicho esto, me despido.
 
 Gracias por todo, que tengais un buen día.
