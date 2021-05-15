@@ -1,5 +1,5 @@
 ---
 layout: directory
 title: Directorio
-permalink: "/about/"
+permalink: "/directory/"
 ---
