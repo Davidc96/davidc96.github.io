@@ -5,14 +5,12 @@ title: El Arte del Cracking
 <h1> Últimos Posts</h1>
 <ul>
 {% for post in paginator.posts %}
-{% if not post.title contains "NOTPUB"}
     <li>
         <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
         <p>{{ post.date | date_to_string }} - {{ post.author }}<p>
         {{ post.excerpt }}
         <a href="{{ post.url }}"><button>Continuar Leyendo</button></a>
     </li>
-{% endif %}
 {% endfor %}
 </ul>
 <!-- Pagination links -->
