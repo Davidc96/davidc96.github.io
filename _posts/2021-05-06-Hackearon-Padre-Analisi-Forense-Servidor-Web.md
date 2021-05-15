@@ -4,6 +4,7 @@ author: David Cuadrado
 tag: [Reverse Engineering, Web]
 title: "¡¡¡Hackearon a mi padre!!! Analisis Forense de la página web de su empresa"
 ---
+![PORTADA](https://davidc96.github.io/assets/images/posts/AFPWE/portada.jpg?style=centerme)
 Sinceramente no tenía intención de hacer este post pero el otro día a mi padre le hackearon la página web de su empresa y le añadieron a su sistema de ficheros, un archivo PHP bastante sospechoso bajo el nombre de framework.php. Pero antes de pasar al analisis de dicho fichero, vamos a contar como sucedieron las cosas, en pocas palabras vamos a hacer un analisis forense de este caso.
 
 Para empezar a entender el contexto, mi padre tiene en Internet, una tienda donde el vende sus productos. Una mañana, al intentar entrar a su página web, los proveedores del servidor y del dominio le bloquearon el acceso. La explicación que le han dado es que se ha detectado actividad maliciosa dentro de su espacio reservado para su página web y que por ello han procedido bloquear el acceso a cualquiera que entre a su página web, con suerte, ya le han vuelto a habilitar el dominio y ya se puede acceder a su página web.
