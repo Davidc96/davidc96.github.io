@@ -5,7 +5,7 @@ tag: [Reverse Engineering, Videojuegos]
 title: "Destripando el glitch del Mundo -1 de Super Mario Bros: Ingenieria Inversa: Estudiando el Glitch a bajo nivel (Parte 2)"
 ---
 
-![MUNDO_MENOS_1_PORTADA](https://davidc96.github.io/assets/images/posts/DSMB/SecondPart/NESAsm.png?style=centerme)
+![MUNDO_MENOS_1_PORTADA](https://davidc96.github.io/assets/images/posts/DSMB/SecondPart/NESAsm.JPG?style=centerme)
 En la <a href="https://davidc96.github.io/2021/05/03/Destripando-Super-Mario-Bros-Introduccion.html">primera parte</a>, pudimos descubrir porque el mundo se llama mundo -1 y esto es debido a que realmente no estamos en el mundo -1, si no en el mundo 36-1 (24h-1) siendo el número 36 un espacio en blanco si lo llegamos a convertir en un caracter. Ahora bien, para demostrar todo esto, lo que vamos a hacer es debuggear el juego con FCEUX e investigaremos que es lo que pasa cuando entramos en la tubería hacia el mundo -1.
 
 # FCEUX El debugger por excelencia para NES
@@ -66,7 +66,6 @@ REG_Y = warpzoneNumber[X];
 
 En estos momentos, el valor de X es 4, por lo que vamos a hacer es con un lápiz y papel, vamos a deducir que valor del Array tiene índice 4
 
-|:------|---------|-------|---------|-------|---------|-------|-------|---------|-------|--------|----------|
 |0      |1        |2      |3        |4      |5        |6      |7      |8        |9      |10      |11        |
 |:------|---------|-------|---------|-------|---------|-------|-------|---------|-------|--------|----------|
 |04     |03       |02     |00       |24     |05       |24     |00     |08       |07     |06      |00        |
@@ -79,7 +78,7 @@ Es más si vamos con cuidado a la segunda tubería, podemos observar que iremos 
 En este momento, sale una duda: ¿Porque X vale 4? Para ello, vamos a colocar un Breakpoint en la instrucción $01DF0C. Al hacer esto y entrar a la primera tubería, vemos que en $06D6 hay un 1 y luego de ello vemos que ese 1 se va convirtiendo en un 4 hasta llegar a la instrucción LDY. Bien, vamos a ver de donde sale ese 1 inicial.
 
 Al parecer el culpable de que se ponga un 1 es concretamente el siguiente bloque que marco en la imagen.
-![NUMBER_1_BLOCK](https://davidc96.github.io/assets/images/posts/DSMB/SecondPart/Block1.jpg?style=centerme)
+![NUMBER_1_BLOCK](https://davidc96.github.io/assets/images/posts/DSMB/SecondPart/Block1.JPG?style=centerme)
 
 Sinceramente tendriamos que investigar mas el mótivo de porque se pone ese valor a 1, para ello, vamos a intentar entender el código fuente gracias a un proyecto en Github llamado <a href="https://gist.github.com/1wErt3r/4048722">A Comprehensive Super Mario Bros Disassembly</a>
 
