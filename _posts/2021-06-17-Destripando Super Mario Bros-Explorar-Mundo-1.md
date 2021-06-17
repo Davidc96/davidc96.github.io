@@ -19,6 +19,7 @@ Antes de entrar en materia vamos a mostrar todos los mapas que forman parte del 
 
 Como podemos observar, el juego de Super Mario Bros, se compone de 8 mundos con 4 niveles cada mundo, es decir, un total de 32 mundos.
 Cada mundo, tiene asociada una ID definida por la siguiente tabla:
+
 |ID (Hex)| World Number |
 |:-------|--------------|
 | 25h    | 1-1          |
@@ -70,7 +71,8 @@ Ahora al guardar los cambios, ejecutar el juego en FCEUX e ir a los dos mundos (
 Como podemos observar, los dos mundos han sido editados, eso quiere decir que de alguna manera, al entrar a la tubería que lleva al mundo -1, el juego interpreta que ese nuevo mundo es un mundo acuático. ¿Porque?
 
 Para eso, vamos a volver de nuevo a volver a analizar el código ensamblador que se encarga de llevarnos a otro mundo al pasar por las tuberías pero lo analizaremos a partir de donde lo habiamos dejado:
-```asm
+```
+
 ...
 01:DF22:BC F2 87  	LDY $87F2,X @ $87F7 = #$05 <--- BREAK
 01:DF25:88        	DEY
@@ -84,6 +86,7 @@ Para eso, vamos a volver de nuevo a volver a analizar el código ensamblador que
 Si recordamos este fragmento de código del segundo post, la línea 0x01DF22 es aquella que se encarga de traer cual es el siguiente mundo que vamos a entrar. Recordar que, el mundo -1 en realidad es el mundo 23h-1h o 35-1 en decimal solo que, la NES interpreta el valor 23h como un espacio en blanco, de ahí que el nombre sea _-1.
 
 Si empezamos desde esa primera línea el estado de los registros es el siguiente:
+
 |Registro|Valor|
 |:-------|-----|
 |   A    |  4h |
@@ -92,8 +95,10 @@ Si empezamos desde esa primera línea el estado de los registros es el siguiente
 
 La siguiente Línea es un Decremento de Y y lo que hace que el valor 24h pase a ser 23h, después este valor lo almacena en 075F que es la posición de memoria donde se imprime el número del mundo por pantalla.
 
-Pasado esto vamos a la siguiente línea
-```asm
+Pasado esto vamos a la siguiente línea:
+
+```
+
 ...
 01:DF22:BC F2 87  	LDY $87F2,X @ $87F7 = #$23
 01:DF25:88        	DEY
@@ -106,7 +111,8 @@ Pasado esto vamos a la siguiente línea
 
 Con la instrucción LDX lo que se hace es seleccionar el mundo en el que estamos, mientras que con LDA seleccionamos el tipo de background que va a tener este mundo.
 
-Para entenderlo mejor, hay que entender estas dos direcciones de memoria (0x9CB4 y 0x9CBC) como si fuera una matriz N x n
+Para entenderlo mejor, hay que entender estas dos direcciones de memoria (0x9CB4 y 0x9CBC) como si fuera una matriz N x n:
+
 ```
 WorldMatrix -------------------- X -----------------
 |   World 1: 1-1, 1-2A, 1-2B, 1-3, 1-4
@@ -129,7 +135,8 @@ Como podemos observar los valores del array que se corresponde al eje Y son los 
 Este caso se daría en condiciones normales, pero estamos hablando de que estamos accediendo a la tubería de la WarpZone antes de tiempo, por lo tanto. ¿Que va a pasar en esa situación?
 
 Volvamos al código ensamblador y vamos a seguir paso por paso lo que está pasando:
-```asm
+```
+
 ...
 01:DF22:BC F2 87  	LDY $87F2,X @ $87F7 = #$23
 01:DF25:88        	DEY
