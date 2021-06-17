@@ -14,12 +14,13 @@ Post relacionados:
 En los post anteriores, descubrimos porque el mundo -1 se llama así, que condiciones se tienen que dar para poder acceder a dicho mundo y porque podemos acceder a él a muy bajo nivel. En esta ocasión estudiaremos porque el mundo -1 es un mundo acuatico e investigaremos si es posible hacer que el mundo -1 pueda llegar a ser otro mundo.
 
 Antes de entrar en materia vamos a mostrar todos los mapas que forman parte del juego
+
 ![OVERWORLD](https://davidc96.github.io/assets/images/posts/DSMB/ThirdPart/AllWorlds.jpg?style=centerme)
 
 Como podemos observar, el juego de Super Mario Bros, se compone de 8 mundos con 4 niveles cada mundo, es decir, un total de 32 mundos.
 Cada mundo, tiene asociada una ID definida por la siguiente tabla:
 |ID (Hex)| World Number |
-|:------:|:------------:|
+|:-------|--------------|
 | 25h    | 1-1          |
 | 29h    | 1-2A         |
 | C0h    | 1-2B         |
@@ -84,7 +85,7 @@ Si recordamos este fragmento de código del segundo post, la línea 0x01DF22 es 
 
 Si empezamos desde esa primera línea el estado de los registros es el siguiente:
 |Registro|Valor|
-|:------:|:---:|
+|:-------|-----|
 |   A    |  4h |
 |   X    |  4h |
 |   Y    |  24h|
@@ -120,7 +121,7 @@ Y
 Donde el eje Y corresponde el mundo y el eje X es considerado el nivel (-1, -2, -3, -4).
 El carro de valores hexadecimales donde se almacena todo esto es el siguiente:
 
-85 E8 60 <span style="color:blue">00 05 0A 0E 13 17 1B 20</span><span style="color:red">25 29 C0 26 60 28 29 01 27 62 24 35 20 63 22 29 41 2C 61 2A 31 26 62 2E 23 2D 60 33 29 01 27 64 30 32 21 65</span> 1F 06 1C 00 70 97 B0 DF 0A 1F 59 7E 9B A9 D0 01
+85 E8 60 <span style="color:blue">00 05 0A 0E 13 17 1B 20 </span><span style="color:red">25 29 C0 26 60 28 29 01 27 62 24 35 20 63 22 29 41 2C 61 2A 31 26 62 2E 23 2D 60 33 29 01 27 64 30 32 21 65</span> 1F 06 1C 00 70 97 B0 DF 0A 1F 59 7E 9B A9 D0 01
 
 Lo marcado en azul es el array que corresponde al eje de las Y, mmientras que lo marcado en rojo son las diferentes ID de cada nivel tal y como se ha mostrado en la primera tabla dentro de este post.
 Como podemos observar los valores del array que se corresponde al eje Y son los diferentes offsets que indican donde está cada nivel dentro del array de color azul. Por ejemplo, si la Y = 5 el valor blueArray[5h] = 13h, Si ese 13 lo ponemos como indice X, y lo buscamos en el array de color rojo redArray[13h] = 2A que corresponde al mundo 5-1.
@@ -144,13 +145,13 @@ En este caso Y = 23, cuando ejecutamos la instrucción LDX $9CB4,Y vemos que alg
 
 La posicion número 23h desde el principio de blueArray[23/8] es el valor 33, y si, como estamos viendo está cogiendo un valor que viene del array donde se encuentran las IDs de los diferentes mundos
 
-85 E8 60 <span style="color:blue">00 05 0A 0E 13 17 1B 20</span><span style="color:red">25 29 C0 26 60 28 29 01 27 62 24 35 20 63 22 29 41 2C 61 2A 31 26 62 2E 23 2D 60 <b>33</b> 29 01 27 64 30 32 21 65</span> 1F 06 1C 00 70 97 B0 DF 0A 1F 59 7E 9B A9 D0 01
+85 E8 60 <span style="color:blue">00 05 0A 0E 13 17 1B 20 </span><span style="color:red">25 29 C0 26 60 28 29 01 27 62 24 35 20 63 22 29 41 2C 61 2A 31 26 62 2E 23 2D 60 <b>33</b> 29 01 27 64 30 32 21 65</span> 1F 06 1C 00 70 97 B0 DF 0A 1F 59 7E 9B A9 D0 01
 
 La siguiente instrucción LDA $9CBC,X hará lo siguiente worldIDArray[33h] lo mismo vuelve a pasar el worldIDArray es un array de 23 posiciones y se necesita la posición 33h de 23 (32h), todo muy gracioso la verdad xD.
 
 Dicho valor es 1F que se encuentra justo después del último valor del array worldIDArray.
 
-85 E8 60 <span style="color:blue">00 05 0A 0E 13 17 1B 20</span><span style="color:red">25 29 C0 26 60 28 29 01 27 62 24 35 20 63 22 29 41 2C 61 2A 31 26 62 2E 23 2D 60 33 29 01 27 64 30 32 21 65</span><b> 1F</b> 06 1C 00 70 97 B0 DF 0A 1F 59 7E 9B A9 D0 01
+85 E8 60 <span style="color:blue">00 05 0A 0E 13 17 1B 20 </span><span style="color:red">25 29 C0 26 60 28 29 01 27 62 24 35 20 63 22 29 41 2C 61 2A 31 26 62 2E 23 2D 60 33 29 01 27 64 30 32 21 65</span><b> 1F</b> 06 1C 00 70 97 B0 DF 0A 1F 59 7E 9B A9 D0 01
 
 Si vamos a la tabla de mundos el 1F se corresponde al mundo 2-2 y 7-2, entonces una vez almacenado ese valor en $0750 el juego interpreta que el mapa escogido es como el mundo 7-2 o 2-2 es por eso que el mundo -1 es un mundo acuático.
 
