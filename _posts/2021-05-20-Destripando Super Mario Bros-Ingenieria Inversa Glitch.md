@@ -6,7 +6,12 @@ title: "Destripando el glitch del Mundo -1 de Super Mario Bros: Ingenieria Inver
 ---
 
 ![MUNDO_MENOS_1_PORTADA](https://davidc96.github.io/assets/images/posts/DSMB/SecondPart/NESAsm.JPG?style=centerme)
+
 En la <a href="https://davidc96.github.io/2021/05/03/Destripando-Super-Mario-Bros-Introduccion.html">primera parte</a>, pudimos descubrir porque el mundo se llama mundo -1 y esto es debido a que realmente no estamos en el mundo -1, si no en el mundo 36-1 (24h-1) siendo el número 36 un espacio en blanco si lo llegamos a convertir en un caracter. Ahora bien, para demostrar todo esto, lo que vamos a hacer es debuggear el juego con FCEUX e investigaremos que es lo que pasa cuando entramos en la tubería hacia el mundo -1.
+
+Post relacionados:
+-   <a href="https://davidc96.github.io/2021/05/03/Destripando-Super-Mario-Bros-Introduccion.html">Primera parte</a></br>
+-   <a href="https://davidc96.github.io/2021/06/17/Destripando-Super-Mario-Bros-Explorar-Mundo-1.html">Tercera parte</a></br>
 
 # FCEUX El debugger por excelencia para NES
 Antes de entrar en materia, hay que conocer un poco el debugger que vamos a utilizar. Al abrirlo nos aparecerá una pantalla como la siguiente:
@@ -84,7 +89,7 @@ Sinceramente tendriamos que investigar mas el mótivo de porque se pone ese valo
 
 Este repositorio contiene una versión decompilada de Super Mario Bros NES y nos facilita mucho el análisis estático del juego debido a que explica el código muy bien. En este repositorio vamos a buscar el objeto WarpZoneControl cuya dirección es la $0626. Ahora nuestro objetivo es encontrar el mismo fragmento de código que inserta un 1 en WarpZoneControl cuando pasamos por el bloque anterior.
 Vamos a entender que está pasando aquí gracias al código en Github:
-```asm
+```
 WarpZoneObject:
       lda ScrollLock         ;check for scroll lock flag
       beq ExGTimer           ;branch if not set to leave
@@ -158,5 +163,5 @@ Con esto concluye la segunda parte del glitch, en la tercera parte, veremos porq
 
 Muchas gracias por leerme y nos vemos en el siguiente post.
 
-
+<a href="">Tercera parte: Estudiando el mundo acuatico detrás del mundo -1</a>
 

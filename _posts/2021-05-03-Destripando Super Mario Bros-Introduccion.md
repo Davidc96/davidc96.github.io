@@ -6,9 +6,14 @@ title: "Destripando el glitch del Mundo -1 de Super Mario Bros: Introducción, H
 ---
 
 ![MUNDO_MENOS_1_PORTADA](https://davidc96.github.io/assets/images/posts/DSMB/Introduccion/Mundo361Portada.jpg?style=centerme)
+
 En este post voy a explicar una de las investigaciones que hice hace unos años sobre uno de los glitches más conocidos por el paronama gamer de uno de los videojuegos que marcaron historia, el Super Mario Bros para la Nintendo Entertainment System (NES).
 
 Esta investigación la dividiré en 3 post. En este primer post haré una pequeña introducción acerca de la NES así como una explicación muy por encima acerca del mundo -1. En los siguientes post, entraremos mas en detalle acerca del glitch y explicaremos porqué este se produce a bajo nivel. Durante el proceso, voy a ir explicando conceptos básicos de Reversing y Ensamblador.
+
+Post relacionados:
+-   <a href="https://davidc96.github.io/2021/05/20/Destripando-Super-Mario-Bros-Ingenieria-Inversa-Glitch.html">Segunda parte</a></br>
+-   <a href="https://davidc96.github.io/2021/06/17/Destripando-Super-Mario-Bros-Explorar-Mundo-1.html">Tercera parte</a></br>
 
 # Nintendo Entertainment System
 La Nintendo Entertainment System o por sus siglas NES, es una de las primeras consolas de Nintendo en 1983. Dicha consola fue una revolución en aquella época, vendiendo más de 60 millones a nivel mundial. Lo que hacía único a esta consola era la calidad gráfica que ofrecía frente a la otra competencia  como Commodore o Spectrum con colores vivos, juegos medianamente optimizados, precio asequible para aquella época (estamos hablando que en aquella época existian calculadoras por 60 u 80 €) y unos controles únicos adaptados a todo el mundo.
@@ -118,3 +123,4 @@ En la NES el 0x24 corresponde al caracter " " (vacío) algo muy interesante teni
 
 En esta primera parte, hemos dado a conocer un poco la historia de la consola y sus detalles técnicos sin entrar muy en profundidad. También sabemos que es el mundo -1 y como podemos acceder a él. El siguiente post entraremos en detalle en porque se produce este glitch y conoceremos un poco porque se habilita la Warpzone de 4-2 cuando producimos el bug de Walk Through Walls.
 
+<a href="">Segunda parte: Ingenieria inversa del Glitch del mundo -1</a>
