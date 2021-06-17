@@ -14,6 +14,7 @@ Post relacionados:
 En los post anteriores, descubrimos porque el mundo -1 se llama así, que condiciones se tienen que dar para poder acceder a dicho mundo y porque podemos acceder a él a muy bajo nivel. En esta ocasión estudiaremos porque el mundo -1 es un mundo acuatico e investigaremos si es posible hacer que el mundo -1 pueda llegar a ser otro mundo.
 
 Antes de entrar en materia vamos a mostrar todos los mapas que forman parte del juego
+
 ![OVERWORLD](https://davidc96.github.io/assets/images/posts/DSMB/ThirdPart/AllWorlds.jpg?style=centerme)
 
 Como podemos observar, el juego de Super Mario Bros, se compone de 8 mundos con 4 niveles cada mundo, es decir, un total de 32 mundos.
