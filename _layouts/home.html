@@ -10,6 +10,7 @@ title: El Arte del Cracking
         <p>{{ post.date | date_to_string }} - {{ post.author }}<p>
         {{ post.content | truncatewords: 80 }}
         <br/>
+        <br/>
         <a href="{{ post.url }}"><button>Continuar Leyendo</button></a>
     </li>
 {% endfor %}
