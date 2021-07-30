@@ -28,7 +28,7 @@ Para crear nuestro propio laboratorio de Azure Active Directory, es necesario cr
 
 Una vez accedido, aparecerán 3 cuadros grandes, en uno de ellos pone Administrar Azure Active Directory > Ver, en el caso de que no os apareciera, debajo de las cajas, vereis un icono que pone Azure Active Directory, le dais click. Si no os aparece en ningún lado, ir al buscador y poneis Azure Active Directory.
 
-![AZURE_PORTAL](https://davidc96.github.io/assets/images/posts/PASSPRT/Portal Azure.jpg?style=centerme)
+![AZURE_PORTAL](https://davidc96.github.io/assets/images/posts/PASSPRT/PortalAzure.jpg?style=centerme)
 
 Por defecto, Azure te crea un Azure Active Directory, yo en mi caso, como podemos crear tantos Azure AD como queramos, se crea uno nuevo, pero si quereis, podeis usar el que ya viene por defecto.
 
