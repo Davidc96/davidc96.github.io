@@ -4,7 +4,7 @@ author: David Cuadrado
 tag: [Hardware]
 title: "Proxmark3: Debrickeando mi Proxmark con un JLink y Windows 10"
 ---
-![PORTADA](https://davidc96.github.io/assets/images/posts/PASSPRT/AllStuffConnected.jpg?style=centerme)
+![PORTADA](https://davidc96.github.io/assets/images/posts/PROXMARK3/AllStuffConnected.jpg?style=centerme)
 
 Buenas de nuevo, aquí estoy de nuevo publicando otra de mis batallitas, pero esta vez con una Proxmark3, os voy a poner en situación.
 
@@ -62,7 +62,7 @@ TCK     9<br>
 GND     6<br>
 3.3     2<br>
 
-![JLINK_PINOUT](https://davidc96.github.io/assets/images/posts/PROXMARK3/jtag_pin.jfif?style=centerme)
+![JLINK_PINOUT](https://davidc96.github.io/assets/images/posts/PROXMARK3/jtag_pin.jpg?style=centerme)
 
 En este caso hay que conectar los diferentes pines del Proxmark3 a su respectivo JLink, en mi caso, como no estoy soldando hay que tener cuidado de que los cables no se toquen entre sí ya que podía darse un cortocircuito y acabar de liarla.
 
