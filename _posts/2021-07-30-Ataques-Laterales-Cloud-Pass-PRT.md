@@ -173,7 +173,7 @@ Una vez inyectada, ya tenemos acceso al portal de office sin necesidad de la con
 
 Como conclusiones, este ataque aprovecha un "fallo", y lo ponemos entre muchas comillas, en Oauth acerca de que pasaría si el atacante obtiene el Refresh Token. Como siempre, Microsoft hace de las suyas y sin necesidad de Mimikatz o de permisos elevados, podemos obtener un token PRT de 14 días de duración gracias a la extensión de Google Chrome.
 
-A diferencia del token generado por BrowserCore, el token generado por Mimikatz es un token que tiene una duración de 14 días debido a que no incluye según que campos especificos de la URI. Antes con BrowserCore, podías generar tokens de 90 días pero eso lo caparon (creo que por razones obvias xD).
+A diferencia del token generado por BrowserCore, el token generado por Mimikatz es un token que tiene una duración de 90 días debido a que no incluye según que campos especificos de la URI. Antes con BrowserCore, podías generar tokens de 90 días pero eso lo caparon (creo que por razones obvias xD).
 
 Con esto finalizamos este post, espero que lo hayais disfrutado y como siempre, hacerlo todo en un entorno controlado. Hasta el siguiente post
 
