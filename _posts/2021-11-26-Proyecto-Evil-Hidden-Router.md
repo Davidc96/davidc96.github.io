@@ -4,18 +4,18 @@ author: David Cuadrado
 tag: Hardware Hacking
 title: "Proyecto Evil Hidden Router: Creando un router oculto para pruebas de penetración Wireless"
 ---
-![PORTADA](https://davidc96.github.io/assets/images/posts/portada.jpg?style=centerme)
+![PORTADA](https://davidc96.github.io/assets/images/posts/PHR/portada.jpg?style=centerme)
 Hace mucho tiempo que no publico nada en el blog pero esta vez quiero enseñaros un proyecto que he estado haciendo durante estos días. La motivación de este proyecto viene debido a una
 charla que se realizó en una conferencia online en 2020 (No recuerdo bien que conferencia era) que hablaban sobre las Drop boxes para equipos de Red Team.
 
 Una Drop box por decirlo así es el hecho de ocultar algo malintencionado dentro de un objeto cotidiano con el fin de que pase desapercibido a ojos de cualquier persona. Los mas conocidos
 serían los Rubber Ducky que aparentan ser una USB normal y corriente, pero en realidad es un HID que actua como teclado para poder ejecutar comandos.
 
-![RUBBER_DUCKY](https://davidc96.github.io/assets/images/posts/rubby_ducky.jpg?style=centerme)
+![RUBBER_DUCKY](https://davidc96.github.io/assets/images/posts/PHR/rubby_ducky.jpg?style=centerme)
 
 También podemos encontrar teclados modificados o Keyloggers que incorporan un pequeño chip con la finalidad de capturar todo lo que escribe la víctima. Conociendo la marca mas popular en una empresa, se puede llegar a crear ese tipo de teclados y pasarían bastante desapercibidos.
 
-![HIDDEN_KEYBOARD](https://davidc96.github.io/assets/images/posts/keylogger.jpg?style=centerme)
+![HIDDEN_KEYBOARD](https://davidc96.github.io/assets/images/posts/PHR/keylogger.jpg?style=centerme)
 
 Pero no todo se resume a modificaciones hardware o tratar de realizar ataques a nivel de capa física. Con la llegada de los miniordenadores, es posible construir proyectos que cumplan los dos requisitos mencionados: Que sirva para hacer auditorias y que pase desapercibido a ojos de cualquiera.
 
@@ -33,7 +33,7 @@ En resumen el material necesario és:
 - Una MicroSD
 - Celo para pegar los componentes a la caja
 
-![MATERIALS](https://davidc96.github.io/assets/images/posts/materials.jpg?style=centerme)
+![MATERIALS](https://davidc96.github.io/assets/images/posts/PHR/materials.jpg?style=centerme)
 
 El sistema operativo que voy a utilizar va a ser el Raspberry OS o Raspbian y utilizaré el repositorio de <a href="">Airgeddon</a> para poder automatizar los ataques a redes Wifi.
 
@@ -179,13 +179,13 @@ La ventaja es que la caja es lo suficientemente grande para que entre todo, yo h
 
 Mi distribución es la siguiente
 
-![ALL_CONNECTED](https://davidc96.github.io/assets/images/posts/all_connected.jpg?style=centerme)
+![ALL_CONNECTED](https://davidc96.github.io/assets/images/posts/PHR/all_connected.jpg?style=centerme)
 
 Como podeis ver, he intentado acomodarlo como he podido aprovechando los espacios y pegando con celo los cables para que no molestaran al cerrar la caja
 
 Una vez hecho esto, si hacemos la puesta en marcha este sería el resultado
 
-![FINAL_RESULT](https://davidc96.github.io/assets/images/posts/final_result.jpg?style=centerme)
+![FINAL_RESULT](https://davidc96.github.io/assets/images/posts/PHR/final_result.jpg?style=centerme)
 
 ## Conclusiones
 
