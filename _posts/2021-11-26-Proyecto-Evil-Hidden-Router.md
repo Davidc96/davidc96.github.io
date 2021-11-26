@@ -11,7 +11,7 @@ charla que se realizó en una conferencia online en 2020 (No recuerdo bien que c
 Una Drop box por decirlo así es el hecho de ocultar algo malintencionado dentro de un objeto cotidiano con el fin de que pase desapercibido a ojos de cualquier persona. Los mas conocidos
 serían los Rubber Ducky que aparentan ser una USB normal y corriente, pero en realidad es un HID que actua como teclado para poder ejecutar comandos.
 
-![RUBBER_DUCKY](https://davidc96.github.io/assets/images/posts/PHR/rubby_ducky.jpg?style=centerme)
+![RUBBER_DUCKY](https://davidc96.github.io/assets/images/posts/PHR/rubber_ducky.jpg?style=centerme)
 
 También podemos encontrar teclados modificados o Keyloggers que incorporan un pequeño chip con la finalidad de capturar todo lo que escribe la víctima. Conociendo la marca mas popular en una empresa, se puede llegar a crear ese tipo de teclados y pasarían bastante desapercibidos.
 
