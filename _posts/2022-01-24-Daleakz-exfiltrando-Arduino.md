@@ -2,7 +2,7 @@
 layout: post
 author: David Cuadrado
 tag: Hardware Hacking
-title: "Proyecto DaLeakz: Ex"
+title: "Proyecto DaLeakz: Exfiltrando información utilizando Arduino"
 ---
 ![PORTADA](https://davidc96.github.io/assets/images/posts/DALEAKZ/main_pic.jpg?style=centerme)
 
