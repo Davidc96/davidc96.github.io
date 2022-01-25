@@ -44,7 +44,7 @@ El repositorio está formado por 2 carpetas:
 
 El primer paso es tener una MicroSD y formatearla en FAT32 (Muy importante debido a que la librería de Arduino para las SD es una extensión obsoleta de SDLib por lo que el único formato que soporta es FAT32)
 
-Una vez tenemos la MicroSD preparada y montada en el Arduino, conectamos el Arduino al PC, ejecutamos el Arduino ID y abrimos el archivo main.ino situado en la carpeta arduino_project
+Una vez tenemos la MicroSD preparada y montada en el Arduino, conectamos el Arduino al PC, ejecutamos el Arduino IDE y abrimos el archivo main.ino situado en la carpeta arduino_project
 
 ![ARDUINO_IDE](https://davidc96.github.io/assets/images/posts/DALEAKZ/arduinoide.jpg?style=centerme)
 
@@ -63,19 +63,35 @@ Una vez hecho esto, se nos mostrará la siguiente pantalla
 
 ![DALEAKZ_HELP](https://davidc96.github.io/assets/images/posts/DALEAKZ/daleakzCLI.jpg?style=centerme)
 
-Enviando un PDF al Arduino
+Enviando un PDF al Arduino:
+
+```
+python3 daleakz.py -f test.pdf write <COMX o /dev/USBX>
+```
 
 ![DALEAKZ_WRITE](https://davidc96.github.io/assets/images/posts/DALEAKZ/daleakzwrite.jpg?style=centerme)
 
-Recibiendo un archivo desde el Arduino
+Recibiendo un archivo desde el Arduino:
+
+```
+python3 daleakz.py -f test.pdf read <COMX o /dev/USBX>
+```
 
 ![DALEAKZ_READ](https://davidc96.github.io/assets/images/posts/DALEAKZ/daleakzread.jpg?style=centerme)
 
 Obteniendo una lista de los ficheros dentro de la MicroSD
 
+```
+python3 daleakz.py list <COMX o /dev/USBX>
+```
+
 ![DALEAKZ_LIST](https://davidc96.github.io/assets/images/posts/DALEAKZ/daleakzlist.jpg?style=centerme)
 
 Eliminando un fichero dentro de la MicroSD
+
+```
+python3 daleakz.py -f <file> remove <COMX o /dev/USBX>
+```
 
 ![DALEAKZ_REM](https://davidc96.github.io/assets/images/posts/DALEAKZ/daleakzremove.jpg?style=centerme)
 
