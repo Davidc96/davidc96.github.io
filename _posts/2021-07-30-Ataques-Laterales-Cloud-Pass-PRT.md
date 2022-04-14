@@ -1,7 +1,7 @@
 ---
 layout: post
 author: David Cuadrado
-tag: [Windows, Web]
+tag: [Windows, Web, Cloud]
 title: "Ataques Laterales en el Cloud: Pass The PRT"
 ---
 ![PORTADA](https://davidc96.github.io/assets/images/posts/PASSPRT/portada.jpg?style=centerme)
