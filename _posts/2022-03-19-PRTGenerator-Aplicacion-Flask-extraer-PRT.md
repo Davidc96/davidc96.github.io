@@ -39,7 +39,10 @@ pip install flask
 set FLASK_APP=main.py
 ```
 
-Antes de ejecutar la aplicación es necesario obtener una URL dummy para generar un token PRT no funcional. Para ello abrimos el navegador en modo incognito y vamos a la URL <a href="https://teams.microsoft.com">https://teams.microsoft.com</a> y aparecerá la pantalla de login de Microsoft.
+<b>IMPORTANTE: Es necesario que esta herramienta esté en el ordenador víctima para poder generar el Token PRT, si no, no va a funcionar</b>
+
+
+Antes de ejecutar la aplicación es necesario obtener una URL dummy para generar un token PRT no funcional. Para ello abrimos el navegador en modo incognito en el ordenador que queremos suplantar y vamos a la URL <a href="https://teams.microsoft.com">https://teams.microsoft.com</a> y aparecerá la pantalla de login de Microsoft.
 
 ![LOGIN_MICROSOFT](https://davidc96.github.io/assets/images/posts/TOOLPRT/LOGIN_MICROSOFT.png?style=centerme)
 
@@ -51,7 +54,7 @@ Ahora si, ejecutamos la aplicación con ```flask run --host 0.0.0.0```
 
 ### Uso de la aplicación
 
-Al entrar a la URL http://IP DE LA MÁQUINA:5000, aparecerá la siguiente pantalla:
+Al entrar a la URL http://<IP DE LA MÁQUINA>:5000, aparecerá la siguiente pantalla:
 
 ![MAIN_SCREEN](https://davidc96.github.io/assets/images/posts/TOOLPRT/FLASK_APP.JPG?style=centerme)
 
@@ -80,3 +83,13 @@ Este ataque solo funciona en Google Chrome o derivados (creo que si funciona en 
 En Microsoft Teams, a veces se muestra un error que dice: Ops, algo sale mal. Para resolver esto, haga clic en Cerrar sesión e intente iniciar sesión nuevamente. No te preocupes cuando se cierre la sesión porque cuando vuelvas a iniciarla se utilizará el PRT ya generado.
 
 En Microsoft Teams al entrar con el token PRT, entrá en un bucle infinito, para resolver esto, simplemente escribe en la URL https://teams.microsoft.com y se resolverá el problema.
+
+## ¿Donde está la magia? Como weaponizarlo para auditorias de Red team
+
+Como podeis observar, la herramienta no está pensada para auditorias (está más bien pensada para otros fines xd) por lo que desplegar esto en una auditoría genera bastante ruído.
+
+La magia de esta herramienta reside en el fichero <b>pass_prt.py</b>, ahí es donde se encuentra todo lo necesario para generar el Token. El código está pensado para que se pueda weaponizar facilmente mediante línea de comandos sin necesidad de instalar toda la aplicación entera.
+
+## Agradecimientos 
+
+<a href="https://github.com/dirkjanm">@Dirkjanm</a> por el script de Pass-The-PRT y el autor de haber encontrado esto.
