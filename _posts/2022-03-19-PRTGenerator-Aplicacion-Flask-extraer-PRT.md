@@ -8,7 +8,9 @@ title: "PRTGenerator: Aplicación escrita en FLASK para extraer el token PRT"
 
 Buenas a todos, en este post voy a enseñaros una herramienta desarrollada por mi que sirve para poder hacer ataques Pass The PRT y así conseguir acceder a un recurso en Azure que esté restringido sin necesidad de utilizar una máquina autorizada.
 
-A modo resumen, PRT viene de las siglas, Primary Refresh Token y es un token que sirve para poder obtener un token de acceso a la aplicación, si quereis información detallada de como funciona el ataque Pass the PRT y como montaros vuestro propio laboratorio totalmente gratuíto os dejo el <a href="">enlace a mi post que habla sobre el tema</a>. 
+A modo resumen, PRT viene de las siglas, Primary Refresh Token y es un token que sirve para poder obtener un token de acceso a la aplicación, si quereis información detallada de como funciona el ataque Pass the PRT y como montaros vuestro propio laboratorio totalmente gratuíto os dejo el enlace a mi post que habla sobre el tema: 
+
+<a href="https://davidc96.github.io/2021/07/30/Ataques-Laterales-Cloud-Pass-PRT.html">Ataques Laterales en el Cloud: Pass The PRT</a>. 
 
 Para extraer este token, es necesario estar en una máquina la cual si tenga acceso a ese recurso y como necesitaba extraer ese token de manera rápida y eficiente decidí desarrollar una herramienta en FLASK.
 
