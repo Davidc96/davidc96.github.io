@@ -62,7 +62,7 @@ Pasos:
 
 - Nombre: x-ms-RefreshTokenCredential
 - Value: El base64 entregado
-- SecureFlag: True
+- HttpOnly: True
 
 2. Al hacer F5 a la página, volvemos de nuevo al login pero con una URL diferente, copiamos la URL y la pegamos en la tercera caja de texto y le damos a generar.
 
