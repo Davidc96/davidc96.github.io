@@ -54,7 +54,8 @@ Una vez instalado Windows 10, hay que unirlo al Azure Active Directory, para ell
 
 Una vez aparezca la nueva ventana, le damos a Unir este dispositivo a Azure Active Directory, ingresamos nuestras credenciales y ya estaremos unidos al Azure Active Directory
 
-<b>CURIOSIDAD 1: Si queremos agregar un dispositivo al Active Directory On-premises es necesario unirlo con una cuenta que sea Domain Controller, en Azure AD, da igual si el usuario es administrador global o no, cualquiera puede registrar un dispositivo. Esta opción puede ser cambiada dentro de Azure Active Directory, os invito a investigar :D</b>
+<b>CURIOSIDAD 1: Si queremos agregar un dispositivo al Active Directory On-premises es necesario unirlo con una cuenta que sea Domain Controller, en Azure AD, da igual si el usuario es administrador global o no, cualquiera puede registrar un dispositivo. Esta opción puede ser cambiada dentro de Azure Active Directory, os invito a investigar :D
+Por defecto un usuario sea Domain controller o no, puede agregar hasta 10 dispositivos al AD, lo mismo pasa con Azure AD. Esto es considerado una mala práctica y es recomendable que un usuario no pueda agregar maquinas al dominio. Os dejo un link por si quereis saber mas sobre el tema <a href="https://windowserver.wordpress.com/2015/11/12/quin-puede-unir-mquinas-al-dominio-y-cuntas/">Link</a>. Agradecimientos a @jlmacal por la aclaración</b>
 </br>
 <b>CURIOSIDAD 2: Al unirse el dispositivo al Azure Active Directory, la cuenta que se ha utilizado para unirse pasará automáticamente a ser Administrador local de la máquina</b>
 
